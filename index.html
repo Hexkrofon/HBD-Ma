@@ -1,156 +1,171 @@
 <!doctype html>
 <html lang="id">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Selamat Ulang Tahun, ma        !</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&family=Pacifico&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg1:#fff7f0;
-      --bg2:#ffeef6;
-      --accent:#ff6b81;
-      --accent2:#ffb86b;
-      --text:#3b2b2b;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%;margin:0;font-family:Montserrat,system-ui,-apple-system,"Segoe UI",Roboto,'Helvetica Neue',Arial; color:var(--text)}
-   body{
-    background:linear-gradient(180deg,var(--bg1),var(--bg2));
-    display:flex;
-    /* align-items:center; <- Hapus atau komentari baris ini */
-    align-items:flex-start; /* Mengubah agar konten sejajar atas, bukan di tengah */
-    justify-content:center;
-    padding:32px;
-  }
-  .card{
-    width:100%;
-    max-width:980px;
-    background:linear-gradient(135deg,rgba(255,255,255,0.9),rgba(255,255,255,0.75));
-    border-radius:18px;
-    padding:48px 32px;
-    box-shadow:0 12px 40px rgba(59,43,43,0.12);
-    position:relative;
-    overflow:hidden;
-    margin-top:40px; /* Tambahkan atau sesuaikan ini untuk jeda di bagian atas */
-  }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Selamat Ulang Tahun, ma        !</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg1:#fff7f0;
+      --bg2:#ffeef6;
+      --accent:#ff6b81;
+      --accent2:#ffb86b;
+      --text:#3b2b2b;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Montserrat,system-ui,-apple-system,"Segoe UI",Roboto,'Helvetica Neue',Arial; color:var(--text)}
+   body{
+    background:linear-gradient(180deg,var(--bg1),var(--bg2));
+    display:flex;
+    align-items:flex-start;
+    justify-content:center;
+    padding:20px; /* Kurangi padding global untuk mobile */
+  }
+  .card{
+    width:100%;
+    max-width:980px;
+    background:linear-gradient(135deg,rgba(255,255,255,0.9),rgba(255,255,255,0.75));
+    border-radius:18px;
+    padding:32px 20px; /* Kurangi padding card untuk mobile */
+    box-shadow:0 12px 40px rgba(59,43,43,0.12);
+    position:relative;
+    overflow:hidden;
+    margin-top:20px; /* Kurangi margin atas */
+    margin-bottom:20px; /* Tambahkan margin bawah */
+  }
 
-    /* Decorative confetti */
-    .confetti{position:absolute;inset:0;pointer-events:none}
-    .confetti span{
-      position:absolute;display:block;width:10px;height:14px;opacity:0.9;transform-origin:center;animation:confetti-fall linear infinite;
-    }
-    @keyframes confetti-fall{
-      0%{transform:translateY(-20vh) rotate(0);opacity:1}
-      100%{transform:translateY(120vh) rotate(720deg);opacity:0.9}
-    }
-    /* header */
-    header{display:flex;gap:20px;align-items:center}
-    .logo{
-      width:112px;height:112px;border-radius:14px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;color:white;font-family:Pacifico, cursive;font-size:22px;flex:0 0 112px;box-shadow:0 8px 24px rgba(255,107,129,0.18);
-    }
-    .title{flex:1}
-    h1{margin:0;font-size:28px}
-    p.lead{margin:6px 0 0;opacity:0.9}
+    /* Decorative confetti */
+    .confetti{position:absolute;inset:0;pointer-events:none}
+    .confetti span{
+      position:absolute;display:block;width:10px;height:14px;opacity:0.9;transform-origin:center;animation:confetti-fall linear infinite;
+    }
+    @keyframes confetti-fall{
+      0%{transform:translateY(-20vh) rotate(0);opacity:1}
+      100%{transform:translateY(120vh) rotate(720deg);opacity:0.9}
+    }
+    /* header */
+    header{
+      display:flex;
+      gap:16px; /* Kurangi jarak antar elemen */
+      align-items:center
+    }
+    .logo{
+      width:80px; /* Perkecil logo untuk mobile */
+      height:80px; /* Perkecil logo untuk mobile */
+      border-radius:14px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;color:white;font-family:Pacifico, cursive;font-size:18px; /* Perkecil ukuran font logo */
+      flex:0 0 80px; /* Atur lebar tetap yang baru */
+      box-shadow:0 8px 24px rgba(255,107,129,0.18);
+    }
+    .title{flex:1}
+    h1{margin:0;font-size:24px} /* Perkecil ukuran h1 */
+    p.lead{margin:4px 0 0;opacity:0.9;font-size:14px} /* Perkecil ukuran p.lead */
 
-    /* main area */
-    .main{display:grid;grid-template-columns:1fr 340px;gap:24px;margin-top:24px}
-    .message{background:linear-gradient(180deg,rgba(255,255,255,0.6),rgba(255,255,255,0.4));padding:20px;border-radius:12px;min-height:220px}
-    .message h2{font-family:Pacifico, cursive;margin:0 0 8px;font-size:34px;color:var(--accent)}
-    .message p{line-height:1.55;margin:0}
+    /* main area */
+    .main{
+      display:grid;
+      grid-template-columns:1fr; /* Diubah menjadi satu kolom */
+      gap:20px; /* Kurangi jarak */
+      margin-top:20px /* Kurangi margin */
+    }
+    .message{background:linear-gradient(180deg,rgba(255,255,255,0.6),rgba(255,255,255,0.4));padding:16px;border-radius:12px;min-height:auto; /* Hapus min-height agar lebih fleksibel */
+    }
+    .message h2{font-family:Pacifico, cursive;margin:0 0 8px;font-size:30px; /* Perkecil ukuran h2 */
+      color:var(--accent)}
+    .message p{line-height:1.55;margin:0;font-size:15px} /* Sesuaikan ukuran font pesan */
 
-    /* cake card */
-    .side{display:flex;flex-direction:column;gap:18px}
-    .cake{background:linear-gradient(180deg,#fff7f8,#fff1f4);padding:18px;border-radius:12px;text-align:center;box-shadow:0 6px 18px rgba(0,0,0,0.05)}
-    .cake svg{width:120px;height:auto}
-    .btn{display:inline-block;padding:10px 16px;border-radius:10px;background:linear-gradient(90deg,var(--accent),var(--accent2));color:white;text-decoration:none;font-weight:700;box-shadow:0 8px 20px rgba(255,107,129,0.18)}
+    /* cake card */
+    .side{display:flex;flex-direction:column;gap:18px}
+    .cake{background:linear-gradient(180deg,#fff7f8,#fff1f4);padding:18px;border-radius:12px;text-align:center;box-shadow:0 6px 18px rgba(0,0,0,0.05)}
+    .cake svg{width:100px; /* Perkecil SVG kue */
+      height:auto}
+    .btn{display:inline-block;padding:10px 16px;border-radius:10px;background:linear-gradient(90deg,var(--accent),var(--accent2));color:white;text-decoration:none;font-weight:700;box-shadow:0 8px 20px rgba(255,107,129,0.18)}
 
-    /* gallery */
-    .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
-    .photo{background:linear-gradient(180deg,#fff,#fff8f8);height:86px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#b87a86;font-weight:600}
+    /* gallery - jika ada, tambahkan penyesuaian */
+    .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+    .photo{background:linear-gradient(180deg,#fff,#fff8f8);height:86px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#b87a86;font-weight:600}
 
-    /* footer */
-    footer{margin-top:20px;text-align:center;opacity:0.9}
+    /* footer */
+    footer{margin-top:20px;text-align:center;opacity:0.9}
 
-    /* responsive */
-    @media (max-width:880px){
-      .main{grid-template-columns:1fr;}
-      .logo{width:96px;height:96px;font-size:18px}
-    }
+    /* responsive - atur breakpoint khusus mobile jika diperlukan, tapi perubahan di atas sudah cukup baik */
+    @media (min-width: 500px) and (max-width:880px){ /* Tambahkan sedikit penyesuaian untuk tablet */
+      .card{max-width:500px; margin-top:40px; margin-bottom:40px}
+      .logo{width:96px;height:96px;font-size:18px;flex:0 0 96px;}
+      h1{font-size:28px;}
+    }
 
-    /* little animations */
-    .float{animation:float 4s ease-in-out infinite}
-    @keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)} }
+    /* little animations */
+    .float{animation:float 4s ease-in-out infinite}
+    @keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)} }
 
-    /* cake candle flicker */
-    .candle{filter:drop-shadow(0 6px 8px rgba(255,120,120,0.12))}
-    .flame{animation:flicker 1.2s infinite}
-    @keyframes flicker{0%{transform:translateY(0) scale(1)}50%{transform:translateY(-2px) scale(0.95)}100%{transform:translateY(0) scale(1)} }
+    /* cake candle flicker */
+    .candle{filter:drop-shadow(0 6px 8px rgba(255,120,120,0.12))}
+    .flame{animation:flicker 1.2s infinite}
+    @keyframes flicker{0%{transform:translateY(0) scale(1)}50%{transform:translateY(-2px) scale(0.95)}100%{transform:translateY(0) scale(1)} }
 
-    /* confetti positions */
-    .c1{left:6%;top:-5%;animation-duration:6s}
-    .c2{left:18%;top:-10%;animation-duration:7.5s}
-    .c3{left:30%;top:-6%;animation-duration:8.2s}
-    .c4{left:44%;top:-8%;animation-duration:5.6s}
-    .c5{left:60%;top:-12%;animation-duration:9s}
-    .c6{left:74%;top:-7%;animation-duration:6.8s}
-    .c7{left:88%;top:-9%;animation-duration:7.2s}
-    .confetti span{background:var(--accent);}
-    .confetti span:nth-child(odd){background:var(--accent2);width:8px;height:10px}
+    /* confetti positions - disamakan */
+    .c1{left:6%;top:-5%;animation-duration:6s}
+    .c2{left:18%;top:-10%;animation-duration:7.5s}
+    .c3{left:30%;top:-6%;animation-duration:8.2s}
+    .c4{left:44%;top:-8%;animation-duration:5.6s}
+    .c5{left:60%;top:-12%;animation-duration:9s}
+    .c6{left:74%;top:-7%;animation-duration:6.8s}
+    .c7{left:88%;top:-9%;animation-duration:7.2s}
+    .confetti span{background:var(--accent);}
+    .confetti span:nth-child(odd){background:var(--accent2);width:8px;height:10px}
 
-  </style>
+  </style>
 </head>
 <body>
-  <div class="card">
-    <div class="confetti" aria-hidden="true">
-      <span class="c1"></span>
-      <span class="c2"></span>
-      <span class="c3"></span>
-      <span class="c4"></span>
-      <span class="c5"></span>
-      <span class="c6"></span>
-      <span class="c7"></span>
-    </div>
+  <div class="card">
+    <div class="confetti" aria-hidden="true">
+      <span class="c1"></span>
+      <span class="c2"></span>
+      <span class="c3"></span>
+      <span class="c4"></span>
+      <span class="c5"></span>
+      <span class="c6"></span>
+      <span class="c7"></span>
+    </div>
 
-    <header>
-      <div class="logo float">Mama</div>
-      <div class="title">
-        <h1>Selamat Ulang Tahun, Ma!</h1>
-        <p class="lead">Sehat selalu dan panjang umur untuk mama</p>
-      </div>
-    </header>
+    <header>
+      <div class="logo float">Mama</div>
+      <div class="title">
+        <h1>Selamat Ulang Tahun, Ma!</h1>
+        <p class="lead">Sehat selalu dan panjang umur untuk mama</p>
+      </div>
+    </header>
 
-    <div class="main">
-      <section class="message">
-        <h2>Untuk mama</h2>
-        <p>Hari ini istimewa karena hari ini mama Ulang tahun. Aku cuma bisa ngasih web ini sebagai hadiah :)   
-        <br><br>
-        Semoga panjang umur, sehat, dan selalu dipenuhi berkah. Aku sayang Ibu lebih dari kata-kata.
-        </p>
-        <p style="margin-top:16px;font-weight:700;">— Dari Aldo hehehe</p>
-      </section>
+    <div class="main">
+      <section class="message">
+        <h2>Untuk mama</h2>
+        <p>Hari ini istimewa karena hari ini mama Ulang tahun. Aku cuma bisa ngasih web ini sebagai hadiah :)   
+        <br><br>
+        Semoga panjang umur, sehat, dan selalu dipenuhi berkah. Aku sayang Ibu lebih dari kata-kata.
+        </p>
+        <p style="margin-top:16px;font-weight:700;">— Dari Aldo hehehe</p>
+      </section>
 
-      <aside class="side">
-        <div class="cake">
-          <!-- simple cake SVG -->
-          <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" class="candle" aria-hidden="true">
-            <g transform="translate(10,8)">
-              <rect x="10" y="48" width="90" height="36" rx="8" fill="#fff" stroke="#ffd1d9" stroke-width="2"/>
-              <rect x="16" y="38" width="78" height="10" rx="6" fill="#ffdce3" />
-              <rect x="22" y="28" width="66" height="10" rx="6" fill="#ffe8b8" />
-              <!-- candle -->
-              <rect x="54" y="8" width="6" height="20" rx="3" fill="#fff3f5" stroke="#ffd1d9"/>
-              <g class="flame">
-                <path d="M58 6c2 0 5 3 2 7-3 4-6 2-6 0 0-2 1-7 4-7z" fill="#ffb86b"/>
-                <path d="M58 6c1 0 3 2 1 4-2 2-4 1-4 0 0-1 1-4 3-4z" fill="#ff6b81"/>
-              </g>
-            </g>
-          </svg>
-          <h3 style="margin:10px 0 0">Potongan Kue</h3>
-          <p style="margin:8px 0 0;font-size:13px;opacity:0.85">Potong Kuenya</p>
-        </div>
-    <footer>
-    </footer>
-  </div>
+      <aside class="side">
+        <div class="cake">
+                    <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" class="candle" aria-hidden="true">
+            <g transform="translate(10,8)">
+              <rect x="10" y="48" width="90" height="36" rx="8" fill="#fff" stroke="#ffd1d9" stroke-width="2"/>
+              <rect x="16" y="38" width="78" height="10" rx="6" fill="#ffdce3" />
+              <rect x="22" y="28" width="66" height="10" rx="6" fill="#ffe8b8" />
+                            <rect x="54" y="8" width="6" height="20" rx="3" fill="#fff3f5" stroke="#ffd1d9"/>
+              <g class="flame">
+                <path d="M58 6c2 0 5 3 2 7-3 4-6 2-6 0 0-2 1-7 4-7z" fill="#ffb86b"/>
+                <path d="M58 6c1 0 3 2 1 4-2 2-4 1-4 0 0-1 1-4 3-4z" fill="#ff6b81"/>
+              </g>
+            </g>
+          </svg>
+          <h3 style="margin:10px 0 0">Potongan Kue</h3>
+          <p style="margin:8px 0 0;font-size:13px;opacity:0.85">Potong Kuenya</p>
+        </div>
+    <footer>
+    </footer>
+  </div>
 </body>
 </html>
